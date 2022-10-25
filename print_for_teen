@@ -1,0 +1,21 @@
+import volunteer
+volunteer.get_user_information()
+
+def print_all_information():
+
+    for subject in volunteer.subjects_of_service:
+        print(subject+": ")
+
+        for sub_theme in volunteer.subjects_of_service[subject]:
+            print(sub_theme)
+
+def open_related_people_list(subject,sub_theme):
+    print(sub_theme+": ")
+    print()
+    list_of_people = (volunteer.subjects_of_service[subject][sub_theme])
+    for people in list_of_people:
+        for information in people:
+            print(information)
+        print()
+
+open_related_people_list("teach","english")#dont forget merhaot!!!!
