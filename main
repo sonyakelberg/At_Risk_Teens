@@ -1,0 +1,19 @@
+subjects_of_service = {}
+for i in range(2):
+    print("do you want to volunteer?")
+    volunteer_name = input("enter your name")
+    #description = input("enter a description")
+    #contact = input("how could we get in touch with you? enter email or phone number:")
+    subject = input("In which area would you like to contribute?")
+    if subject not in subjects_of_service:
+        subjects_of_service[subject]={}
+    print("Tell us your Sub-theme (your specialization):")
+    sub_theme = input()
+    # sub_theme = ""+sub_theme+ 
+    # subject = "'"+subject+"'"
+    dict_sub= subjects_of_service[subject][sub_theme]=[]
+    subjects_of_service[subject][sub_theme].append([volunteer_name])#,description,contact])
+
+
+print(subjects_of_service)
+#print(subjects_of_service["teach"]["math"])
